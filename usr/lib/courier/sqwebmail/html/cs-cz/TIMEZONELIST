@@ -1,0 +1,457 @@
+#
+# Copyright 2001 Double Precision, Inc.  See COPYING for
+# distribution information.
+#
+# This file lists the available timezones in the login dropdown list
+#
+# The first entry, "* *", renders as an empty, default choice in the
+# dropdown list.  It's impossible to provide a default list of every
+# timezone in use, hence the default leaves your TZ setting untouched.
+#
+# You may wish to remove the default, and move up your local timezone
+# up, since the first listed timezone is going to be the dropdown
+# default.
+#
+Europe/Prague			Czech Republic
+Europe/Mariehamn		Aaland Islands
+Asia/Kabul			Afghanistan
+Europe/Tirane			Albania
+Africa/Algiers			Algeria
+Europe/Andorra			Andorra
+Africa/Luanda			Angola
+America/Anguilla		Anguilla
+Antarctica/Casey		Antarctica: Casey Station, Bailey Peninsula
+Antarctica/Davis		Antarctica: Davis Station, Vestfold Hills
+Antarctica/DumontDUrville	Antarctica: Dumont-d'Urville Station, Adelie Land
+Antarctica/Mawson		Antarctica: Mawson Station, Holme Bay
+Antarctica/McMurdo		Antarctica: McMurdo, South Pole, Scott (New Zealand time)
+Antarctica/Palmer		Antarctica: Palmer Station, Anvers Island
+Antarctica/Rothera		Antarctica: Rothera Station, Adelaide Island
+Antarctica/Syowa		Antarctica: Syowa Station, E Ongul I
+Antarctica/Troll		Antarctica: Troll Station, Queen Maud Land
+Antarctica/Vostok		Antarctica: Vostok Station, Lake Vostok
+America/Antigua			Antigua & Barbuda
+America/Argentina/Salta		Argentina: (SA, LP, NQ, RN)
+America/Argentina/Buenos_Aires	Argentina: Buenos Aires (BA, CF)
+America/Argentina/Catamarca	Argentina: Catamarca (CT), Chubut (CH)
+America/Argentina/Jujuy		Argentina: Jujuy (JY)
+America/Argentina/La_Rioja	Argentina: La Rioja (LR)
+America/Argentina/Mendoza	Argentina: Mendoza (MZ)
+America/Argentina/San_Juan	Argentina: San Juan (SJ)
+America/Argentina/San_Luis	Argentina: San Luis (SL)
+America/Argentina/Rio_Gallegos	Argentina: Santa Cruz (SC)
+America/Argentina/Ushuaia	Argentina: Tierra del Fuego (TF)
+America/Argentina/Tucuman	Argentina: Tucuman (TM)
+America/Argentina/Cordoba	Argentina: most locations (CB, CC, CN, ER, FM, MN, SE, SF)
+Asia/Yerevan			Armenia
+America/Aruba			Aruba
+Australia/Lord_Howe		Australia: Lord Howe Island
+Antarctica/Macquarie		Australia: Macquarie Island
+Australia/Broken_Hill		Australia: New South Wales - Yancowinna
+Australia/Sydney		Australia: New South Wales - most locations
+Australia/Darwin		Australia: Northern Territory
+Australia/Lindeman		Australia: Queensland - Holiday Islands
+Australia/Brisbane		Australia: Queensland - most locations
+Australia/Adelaide		Australia: South Australia
+Australia/Currie		Australia: Tasmania - King Island
+Australia/Hobart		Australia: Tasmania - most locations
+Australia/Melbourne		Australia: Victoria
+Australia/Eucla			Australia: Western Australia - Eucla area
+Australia/Perth			Australia: Western Australia - most locations
+Europe/Vienna			Austria
+Asia/Baku			Azerbaijan
+America/Nassau			Bahamas
+Asia/Bahrain			Bahrain
+Asia/Dhaka			Bangladesh
+America/Barbados		Barbados
+Europe/Minsk			Belarus
+Europe/Brussels			Belgium
+America/Belize			Belize
+Africa/Porto-Novo		Benin
+Atlantic/Bermuda		Bermuda
+Asia/Thimphu			Bhutan
+America/La_Paz			Bolivia
+Europe/Sarajevo			Bosnia & Herzegovina
+Africa/Gaborone			Botswana
+America/Rio_Branco		Brazil: Acre
+America/Maceio			Brazil: Alagoas, Sergipe
+America/Belem			Brazil: Amapa, E Para
+America/Noronha			Brazil: Atlantic islands
+America/Bahia			Brazil: Bahia
+America/Manaus			Brazil: E Amazonas
+America/Cuiaba			Brazil: Mato Grosso
+America/Campo_Grande		Brazil: Mato Grosso do Sul
+America/Fortaleza		Brazil: NE Brazil (MA, PI, CE, RN, PB)
+America/Recife			Brazil: Pernambuco
+America/Porto_Velho		Brazil: Rondonia
+America/Boa_Vista		Brazil: Roraima
+America/Sao_Paulo		Brazil: S & SE Brazil (GO, DF, MG, ES, RJ, SP, PR, SC, RS)
+America/Araguaina		Brazil: Tocantins
+America/Eirunepe		Brazil: W Amazonas
+America/Santarem		Brazil: W Para
+Indian/Chagos			British Indian Ocean Territory
+Asia/Brunei			Brunei
+Europe/Sofia			Bulgaria
+Africa/Ouagadougou		Burkina Faso
+Africa/Bujumbura		Burundi
+Asia/Phnom_Penh			Cambodia
+Africa/Douala			Cameroon
+America/Blanc-Sablon		Canada: Atlantic Standard Time - Quebec - Lower North Shore
+America/Goose_Bay		Canada: Atlantic Time - Labrador - most locations
+America/Moncton			Canada: Atlantic Time - New Brunswick
+America/Halifax			Canada: Atlantic Time - Nova Scotia (most places), PEI
+America/Glace_Bay		Canada: Atlantic Time - Nova Scotia - places that did not observe DST 1966-1971
+America/Swift_Current		Canada: Central Standard Time - Saskatchewan - midwest
+America/Regina			Canada: Central Standard Time - Saskatchewan - most locations
+America/Winnipeg		Canada: Central Time - Manitoba & west Ontario
+America/Rainy_River		Canada: Central Time - Rainy River & Fort Frances, Ontario
+America/Resolute		Canada: Central Time - Resolute, Nunavut
+America/Rankin_Inlet		Canada: Central Time - central Nunavut
+America/Atikokan		Canada: Eastern Standard Time - Atikokan, Ontario and Southampton I, Nunavut
+America/Toronto			Canada: Eastern Time - Ontario & Quebec - most locations
+America/Nipigon			Canada: Eastern Time - Ontario & Quebec - places that did not observe DST 1967-1973
+America/Pangnirtung		Canada: Eastern Time - Pangnirtung, Nunavut
+America/Thunder_Bay		Canada: Eastern Time - Thunder Bay, Ontario
+America/Iqaluit			Canada: Eastern Time - east Nunavut - most locations
+America/Creston			Canada: Mountain Standard Time - Creston, British Columbia
+America/Dawson_Creek		Canada: Mountain Standard Time - Dawson Creek & Fort Saint John, British Columbia
+America/Edmonton		Canada: Mountain Time - Alberta, east British Columbia & west Saskatchewan
+America/Yellowknife		Canada: Mountain Time - central Northwest Territories
+America/Inuvik			Canada: Mountain Time - west Northwest Territories
+America/Cambridge_Bay		Canada: Mountain Time - west Nunavut
+America/St_Johns		Canada: Newfoundland Time, including SE Labrador
+America/Dawson			Canada: Pacific Time - north Yukon
+America/Whitehorse		Canada: Pacific Time - south Yukon
+America/Vancouver		Canada: Pacific Time - west British Columbia
+Atlantic/Cape_Verde		Cape Verde
+America/Kralendijk		Caribbean Netherlands
+America/Cayman			Cayman Islands
+Africa/Bangui			Central African Rep.
+Africa/Ndjamena			Chad
+Pacific/Easter			Chile: Easter Island
+America/Santiago		Chile: most locations
+Asia/Shanghai			China: Beijing Time
+Asia/Urumqi			China: Xinjiang Time
+Indian/Christmas		Christmas Island
+Indian/Cocos			Cocos (Keeling) Islands
+America/Bogota			Colombia
+Indian/Comoro			Comoros
+Africa/Lubumbashi		Congo (Dem. Rep.): east Dem. Rep. of Congo
+Africa/Kinshasa			Congo (Dem. Rep.): west Dem. Rep. of Congo
+Africa/Brazzaville		Congo (Rep.)
+Pacific/Rarotonga		Cook Islands
+America/Costa_Rica		Costa Rica
+Africa/Abidjan			Cote d'Ivoire
+Europe/Zagreb			Croatia
+America/Havana			Cuba
+America/Curacao			Curacao
+Asia/Nicosia			Cyprus
+Europe/Copenhagen		Denmark
+Africa/Djibouti			Djibouti
+America/Dominica		Dominica
+America/Santo_Domingo		Dominican Republic
+Asia/Dili			East Timor
+Pacific/Galapagos		Ecuador: Galapagos Islands
+America/Guayaquil		Ecuador: mainland
+Africa/Cairo			Egypt
+America/El_Salvador		El Salvador
+Africa/Malabo			Equatorial Guinea
+Africa/Asmara			Eritrea
+Europe/Tallinn			Estonia
+Africa/Addis_Ababa		Ethiopia
+Atlantic/Stanley		Falkland Islands
+Atlantic/Faroe			Faroe Islands
+Pacific/Fiji			Fiji
+Europe/Helsinki			Finland
+Europe/Paris			France
+America/Cayenne			French Guiana
+Pacific/Gambier			French Polynesia: Gambier Islands
+Pacific/Marquesas		French Polynesia: Marquesas Islands
+Pacific/Tahiti			French Polynesia: Society Islands
+Indian/Kerguelen		French Southern & Antarctic Lands
+Africa/Libreville		Gabon
+Africa/Banjul			Gambia
+Asia/Tbilisi			Georgia
+Europe/Busingen			Germany: Busingen
+Europe/Berlin			Germany: most locations
+Africa/Accra			Ghana
+Europe/Gibraltar		Gibraltar
+Europe/Athens			Greece
+America/Scoresbysund		Greenland: Scoresbysund / Ittoqqortoormiit
+America/Thule			Greenland: Thule / Pituffik
+America/Danmarkshavn		Greenland: east coast, north of Scoresbysund
+America/Godthab			Greenland: most locations
+America/Grenada			Grenada
+America/Guadeloupe		Guadeloupe
+Pacific/Guam			Guam
+America/Guatemala		Guatemala
+Europe/Guernsey			Guernsey
+Africa/Conakry			Guinea
+Africa/Bissau			Guinea-Bissau
+America/Guyana			Guyana
+America/Port-au-Prince		Haiti
+America/Tegucigalpa		Honduras
+Asia/Hong_Kong			Hong Kong
+Europe/Budapest			Hungary
+Atlantic/Reykjavik		Iceland
+Asia/Kolkata			India
+Asia/Jakarta			Indonesia: Java & Sumatra
+Asia/Makassar			Indonesia: east & south Borneo, Sulawesi (Celebes), Bali, Nusa Tengarra, west Timor
+Asia/Pontianak			Indonesia: west & central Borneo
+Asia/Jayapura			Indonesia: west New Guinea (Irian Jaya) & Malukus (Moluccas)
+Asia/Tehran			Iran
+Asia/Baghdad			Iraq
+Europe/Dublin			Ireland
+Europe/Isle_of_Man		Isle of Man
+Asia/Jerusalem			Israel
+Europe/Rome			Italy
+America/Jamaica			Jamaica
+Asia/Tokyo			Japan
+Europe/Jersey			Jersey
+Asia/Amman			Jordan
+Asia/Aqtobe			Kazakhstan: Aqtobe (Aktobe)
+Asia/Aqtau			Kazakhstan: Atyrau (Atirau, Gur'yev), Mangghystau (Mankistau)
+Asia/Qyzylorda			Kazakhstan: Qyzylorda (Kyzylorda, Kzyl-Orda)
+Asia/Oral			Kazakhstan: West Kazakhstan
+Asia/Almaty			Kazakhstan: most locations
+Africa/Nairobi			Kenya
+Pacific/Tarawa			Kiribati: Gilbert Islands
+Pacific/Kiritimati		Kiribati: Line Islands
+Pacific/Enderbury		Kiribati: Phoenix Islands
+Asia/Pyongyang			Korea (North)
+Asia/Seoul			Korea (South)
+Asia/Kuwait			Kuwait
+Asia/Bishkek			Kyrgyzstan
+Asia/Vientiane			Laos
+Europe/Riga			Latvia
+Asia/Beirut			Lebanon
+Africa/Maseru			Lesotho
+Africa/Monrovia			Liberia
+Africa/Tripoli			Libya
+Europe/Vaduz			Liechtenstein
+Europe/Vilnius			Lithuania
+Europe/Luxembourg		Luxembourg
+Asia/Macau			Macau
+Europe/Skopje			Macedonia
+Indian/Antananarivo		Madagascar
+Africa/Blantyre			Malawi
+Asia/Kuching			Malaysia: Sabah & Sarawak
+Asia/Kuala_Lumpur		Malaysia: peninsular Malaysia
+Indian/Maldives			Maldives
+Africa/Bamako			Mali
+Europe/Malta			Malta
+Pacific/Kwajalein		Marshall Islands: Kwajalein
+Pacific/Majuro			Marshall Islands: most locations
+America/Martinique		Martinique
+Africa/Nouakchott		Mauritania
+Indian/Mauritius		Mauritius
+Indian/Mayotte			Mayotte
+America/Merida			Mexico: Central Time - Campeche, Yucatan
+America/Cancun			Mexico: Central Time - Quintana Roo
+America/Mexico_City		Mexico: Central Time - most locations
+America/Bahia_Banderas		Mexico: Mexican Central Time - Bahia de Banderas
+America/Monterrey		Mexico: Mexican Central Time - Coahuila, Durango, Nuevo Leon, Tamaulipas away from US border
+America/Chihuahua		Mexico: Mexican Mountain Time - Chihuahua away from US border
+America/Santa_Isabel		Mexico: Mexican Pacific Time - Baja California away from US border
+America/Hermosillo		Mexico: Mountain Standard Time - Sonora
+America/Mazatlan		Mexico: Mountain Time - S Baja, Nayarit, Sinaloa
+America/Matamoros		Mexico: US Central Time - Coahuila, Durango, Nuevo Leon, Tamaulipas near US border
+America/Ojinaga			Mexico: US Mountain Time - Chihuahua near US border
+America/Tijuana			Mexico: US Pacific Time - Baja California near US border
+Pacific/Chuuk			Micronesia: Chuuk (Truk) and Yap
+Pacific/Kosrae			Micronesia: Kosrae
+Pacific/Pohnpei			Micronesia: Pohnpei (Ponape)
+Europe/Chisinau			Moldova
+Europe/Monaco			Monaco
+Asia/Hovd			Mongolia: Bayan-Olgiy, Govi-Altai, Hovd, Uvs, Zavkhan
+Asia/Choibalsan			Mongolia: Dornod, Sukhbaatar
+Asia/Ulaanbaatar		Mongolia: most locations
+Europe/Podgorica		Montenegro
+America/Montserrat		Montserrat
+Africa/Casablanca		Morocco
+Africa/Maputo			Mozambique
+Asia/Rangoon			Myanmar (Burma)
+Africa/Windhoek			Namibia
+Pacific/Nauru			Nauru
+Asia/Kathmandu			Nepal
+Europe/Amsterdam		Netherlands
+Pacific/Noumea			New Caledonia
+Pacific/Chatham			New Zealand: Chatham Islands
+Pacific/Auckland		New Zealand: most locations
+America/Managua			Nicaragua
+Africa/Niamey			Niger
+Africa/Lagos			Nigeria
+Pacific/Niue			Niue
+Pacific/Norfolk			Norfolk Island
+Pacific/Saipan			Northern Mariana Islands
+Europe/Oslo			Norway
+Asia/Muscat			Oman
+Asia/Karachi			Pakistan
+Pacific/Palau			Palau
+Asia/Gaza			Palestine: Gaza Strip
+Asia/Hebron			Palestine: West Bank
+America/Panama			Panama
+Pacific/Bougainville		Papua New Guinea: Bougainville
+Pacific/Port_Moresby		Papua New Guinea: most locations
+America/Asuncion		Paraguay
+America/Lima			Peru
+Asia/Manila			Philippines
+Pacific/Pitcairn		Pitcairn
+Europe/Warsaw			Poland
+Atlantic/Azores			Portugal: Azores
+Atlantic/Madeira		Portugal: Madeira Islands
+Europe/Lisbon			Portugal: mainland
+America/Puerto_Rico		Puerto Rico
+Asia/Qatar			Qatar
+Indian/Reunion			Reunion
+Europe/Bucharest		Romania
+Europe/Samara			Russia: Moscow+00 (Moscow+01 after 2014-10-26) - Samara, Udmurtia
+Europe/Volgograd		Russia: Moscow+00 - Caspian Sea
+Europe/Simferopol		Russia: Moscow+00 - Crimea
+Europe/Moscow			Russia: Moscow+00 - west Russia
+Asia/Yekaterinburg		Russia: Moscow+02 - Urals
+Asia/Novokuznetsk		Russia: Moscow+03 (Moscow+04 after 2014-10-26) - Kemerovo
+Asia/Novosibirsk		Russia: Moscow+03 - Novosibirsk
+Asia/Omsk			Russia: Moscow+03 - west Siberia
+Asia/Krasnoyarsk		Russia: Moscow+04 - Yenisei River
+Asia/Irkutsk			Russia: Moscow+05 - Lake Baikal
+Asia/Chita			Russia: Moscow+06 (Moscow+05 after 2014-10-26) - Zabaykalsky
+Asia/Yakutsk			Russia: Moscow+06 - Lena River
+Asia/Khandyga			Russia: Moscow+06 - Tomponsky, Ust-Maysky
+Asia/Vladivostok		Russia: Moscow+07 - Amur River
+Asia/Ust-Nera			Russia: Moscow+07 - Oymyakonsky
+Asia/Sakhalin			Russia: Moscow+07 - Sakhalin Island
+Asia/Magadan			Russia: Moscow+08 (Moscow+07 after 2014-10-26) - Magadan
+Asia/Anadyr			Russia: Moscow+08 (Moscow+09 after 2014-10-26) - Bering Sea
+Asia/Kamchatka			Russia: Moscow+08 (Moscow+09 after 2014-10-26) - Kamchatka
+Asia/Srednekolymsk		Russia: Moscow+08 - E Sakha, N Kuril Is
+Europe/Kaliningrad		Russia: Moscow-01 - Kaliningrad
+Africa/Kigali			Rwanda
+Pacific/Pago_Pago		Samoa (American)
+Pacific/Apia			Samoa (western)
+Europe/San_Marino		San Marino
+Africa/Sao_Tome			Sao Tome & Principe
+Asia/Riyadh			Saudi Arabia
+Africa/Dakar			Senegal
+Europe/Belgrade			Serbia
+Indian/Mahe			Seychelles
+Africa/Freetown			Sierra Leone
+Asia/Singapore			Singapore
+Europe/Bratislava		Slovakia
+Europe/Ljubljana		Slovenia
+Pacific/Guadalcanal		Solomon Islands
+Africa/Mogadishu		Somalia
+Africa/Johannesburg		South Africa
+Atlantic/South_Georgia		South Georgia & the South Sandwich Islands
+Africa/Juba			South Sudan
+Atlantic/Canary			Spain: Canary Islands
+Africa/Ceuta			Spain: Ceuta & Melilla
+Europe/Madrid			Spain: mainland
+Asia/Colombo			Sri Lanka
+America/St_Barthelemy		St Barthelemy
+Atlantic/St_Helena		St Helena
+America/St_Kitts		St Kitts & Nevis
+America/St_Lucia		St Lucia
+America/Lower_Princes		St Maarten (Dutch part)
+America/Marigot			St Martin (French part)
+America/Miquelon		St Pierre & Miquelon
+America/St_Vincent		St Vincent
+Africa/Khartoum			Sudan
+America/Paramaribo		Suriname
+Arctic/Longyearbyen		Svalbard & Jan Mayen
+Africa/Mbabane			Swaziland
+Europe/Stockholm		Sweden
+Europe/Zurich			Switzerland
+Asia/Damascus			Syria
+Asia/Taipei			Taiwan
+Asia/Dushanbe			Tajikistan
+Africa/Dar_es_Salaam		Tanzania
+Asia/Bangkok			Thailand
+Africa/Lome			Togo
+Pacific/Fakaofo			Tokelau
+Pacific/Tongatapu		Tonga
+America/Port_of_Spain		Trinidad & Tobago
+Africa/Tunis			Tunisia
+Europe/Istanbul			Turkey
+Asia/Ashgabat			Turkmenistan
+America/Grand_Turk		Turks & Caicos Is
+Pacific/Funafuti		Tuvalu
+Africa/Kampala			Uganda
+Europe/Uzhgorod			Ukraine: Ruthenia
+Europe/Zaporozhye		Ukraine: Zaporozh'ye, E Lugansk / Zaporizhia, E Luhansk
+Europe/Kiev			Ukraine: most locations
+Asia/Dubai			United Arab Emirates
+Europe/London			United Kingdom
+America/Anchorage		United States: Alaska Time
+America/Juneau			United States: Alaska Time - Alaska panhandle
+America/Yakutat			United States: Alaska Time - Alaska panhandle neck
+America/Sitka			United States: Alaska Time - southeast Alaska panhandle
+America/Nome			United States: Alaska Time - west Alaska
+America/Adak			United States: Aleutian Islands
+America/Chicago			United States: Central Time
+America/Indiana/Tell_City	United States: Central Time - Indiana - Perry County
+America/Indiana/Knox		United States: Central Time - Indiana - Starke County
+America/Menominee		United States: Central Time - Michigan - Dickinson, Gogebic, Iron & Menominee Counties
+America/North_Dakota/Beulah	United States: Central Time - North Dakota - Mercer County
+America/North_Dakota/New_Salem	United States: Central Time - North Dakota - Morton County (except Mandan area)
+America/North_Dakota/Center	United States: Central Time - North Dakota - Oliver County
+America/New_York		United States: Eastern Time
+America/Indiana/Marengo		United States: Eastern Time - Indiana - Crawford County
+America/Indiana/Vincennes	United States: Eastern Time - Indiana - Daviess, Dubois, Knox & Martin Counties
+America/Indiana/Petersburg	United States: Eastern Time - Indiana - Pike County
+America/Indiana/Winamac		United States: Eastern Time - Indiana - Pulaski County
+America/Indiana/Vevay		United States: Eastern Time - Indiana - Switzerland County
+America/Indiana/Indianapolis	United States: Eastern Time - Indiana - most locations
+America/Kentucky/Louisville	United States: Eastern Time - Kentucky - Louisville area
+America/Kentucky/Monticello	United States: Eastern Time - Kentucky - Wayne County
+America/Detroit			United States: Eastern Time - Michigan - most locations
+Pacific/Honolulu		United States: Hawaii
+America/Phoenix			United States: Mountain Standard Time - Arizona (except Navajo)
+America/Denver			United States: Mountain Time
+America/Boise			United States: Mountain Time - south Idaho & east Oregon
+America/Metlakatla		United States: Pacific Standard Time - Annette Island, Alaska
+America/Los_Angeles		United States: Pacific Time
+America/Montevideo		Uruguay
+Pacific/Johnston		US minor outlying islands: Johnston Atoll
+Pacific/Midway			US minor outlying islands: Midway Islands
+Pacific/Wake			US minor outlying islands: Wake Island
+Asia/Tashkent			Uzbekistan: east Uzbekistan
+Asia/Samarkand			Uzbekistan: west Uzbekistan
+Pacific/Efate			Vanuatu
+Europe/Vatican			Vatican City
+America/Caracas			Venezuela
+Asia/Ho_Chi_Minh		Vietnam
+America/Tortola			Virgin Islands (UK)
+America/St_Thomas		Virgin Islands (US)
+Pacific/Wallis			Wallis & Futuna
+Africa/El_Aaiun			Western Sahara
+Asia/Aden			Yemen
+Africa/Lusaka			Zambia
+Africa/Harare			Zimbabwe
+Etc/GMT				GMT
+Etc/GMT+12			12 hours behind GMT
+Etc/GMT+11			11 hours behind GMT
+Etc/GMT+10			10 hours behind GMT
+Etc/GMT+9			9 hours behind GMT
+Etc/GMT+8			8 hours behind GMT
+Etc/GMT+7			7 hours behind GMT
+Etc/GMT+6			6 hours behind GMT
+Etc/GMT+5			5 hours behind GMT
+Etc/GMT+4			4 hours behind GMT
+Etc/GMT+3			3 hours behind GMT
+Etc/GMT+2			2 hours behind GMT
+Etc/GMT+1			1 hour behind GMT
+Etc/GMT-1			1 hour ahead of GMT
+Etc/GMT-2			2 hours ahead of GMT
+Etc/GMT-3			3 hours ahead of GMT
+Etc/GMT-4			4 hours ahead of GMT
+Etc/GMT-5			5 hours ahead of GMT
+Etc/GMT-6			6 hours ahead of GMT
+Etc/GMT-7			7 hours ahead of GMT
+Etc/GMT-8			8 hours ahead of GMT
+Etc/GMT-9			9 hours ahead of GMT
+Etc/GMT-10			10 hours ahead of GMT
+Etc/GMT-11			11 hours ahead of GMT
+Etc/GMT-12			12 hours ahead of GMT
+Etc/GMT-13			13 hours ahead of GMT
+Etc/GMT-14			14 hours ahead of GMT

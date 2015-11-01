@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Nastavení GnuPG šifrování</title>
+  <link rel="stylesheet" type="text/css" href="[#SQWEBMAILCSS#]" />
+  <meta name="GENERATOR" content="amaya 8.0, see http://www.w3.org/Amaya/" />
+  <meta name="MSSmartTagsPreventParsing" content="TRUE" />
+</head>
+
+<body>
+<!--
+
+[#$DELETEFAIL=<p class="error">Chyba při mazání šifrovacího klíče, GnuPG hlášení:</p>#]
+[#$SIGNFAIL=<p class="error">Chyba při podepisování šiforvacího klíče, GnuPG hlášení:</p>#]
+
+[#$DISABLED=Varování: klíč je zakázaný#]
+[#$REVOKED=Varování: klíč je zneplatněný#]
+[#$EXPIRED=Varování: klíč je expirovaný#]
+
+-->
+
+<div align="center">
+
+<table cellpadding="0" cellspacing="0" border="0" width="95%">
+  <tbody>
+    <tr style="line-height: 0">
+      <td align="left" valign="top"
+        style="line-height: 0">[#@graytopleft.png, width="11" height="11"
+        alt="" border="0"@@#]</td>
+      <td bgcolor="#cccccc" class="graybox"></td>
+      <td align="right" valign="top"
+        style="line-height: 0">[#@graytopright.png, width="11" height="11"
+        alt="" border="0"@@#]</td>
+    </tr>
+    <tr bgcolor="#cccccc" class="graybox">
+      <td>&nbsp;</td>
+      <td bgcolor="#cccccc" class="graybox" width="100%">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td align="left" width="100%" valign="middle"
+              class="pageheader">Nastavení GnuPG šifrování</td>
+              <td align="right" valign="middle">[#G#]</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr style="line-height: 0">
+      <td align="left" valign="bottom">[#@graybottomleft.png, width="11"
+        height="11" alt="" border="0"@@#]</td>
+      <td bgcolor="#cccccc" class="graybox"></td>
+      <td align="right" valign="bottom">[#@graybottomright.png, width="11"
+        height="11" alt="" border="0"@@#]</td>
+    </tr>
+  </tbody>
+</table>
+<!-- End of Top Header -->
+<!-- Sections. Folders, Create Messages, Preferences, Etc. -->
+[#include:navbar#] [#DOGPG#]
+
+<table cellpadding="0" cellspacing="0" border="0" width="95%">
+  <tbody>
+    <tr style="line-height: 0">
+      <td align="left" valign="top">[#@bluetopleft.png, width="11"
+        height="11" alt="" border="0"@@#]</td>
+      <td bgcolor="#99ccff" class="bluebox" valign="middle"></td>
+      <td style="line-height: 0" align="right"
+        valign="top">[#@bluetopright.png, width="11" height="11" alt=""
+        border="0"@@#]</td>
+    </tr>
+    <tr bgcolor="#99ccff" class="bluebox">
+      <td>&nbsp;</td>
+      <td valign="middle">
+        <form method="post" action="[#p#]">
+          [#P#] <input type="hidden" name="form" value="gpg" />
+
+          <div align="center" class="gpgpublickeytitle">
+          Veřejné klíče</div>
+          <br />
+          [#LISTPUB#]
+
+          <p>&nbsp;&nbsp;&nbsp;&nbsp; 
+          <input type="submit" value="Smaž veřejný klíč" name="delpub" /></p>
+          <hr width="90%" />
+
+          <div align="center" class="gpgprivatekeytitle">
+          Soukromé klíče</div>
+          <br />
+          [#LISTSEC#]
+
+          <p>&nbsp;&nbsp;&nbsp;&nbsp; 
+          <input type="submit" value="Smaž soukromý klíč" name="delsec"
+          /><input type="checkbox" name="really" />Ano, opravdu jej chci
+          smazat</p>
+          <hr size="1" noshade="noshade" width="100%" />
+
+          <p align="center" class="gpgsignkeytitle">Podepsat veřejný klíč</p>
+          <!-- [#?6#] -->
+
+          <p>&nbsp;&nbsp;Passphrase soukromého klíče: <input type="password"
+          size="20" name="passphrase" /></p>
+          <!-- [#?#] -->
+
+          <p>&nbsp;&nbsp;Výše vyber veřejný a soukromý klíč a 
+          <input type="submit" value="podepiš" name="sign" /></p>
+
+          <table width="90%" border="0" align="center">
+            <tbody>
+              <tr>
+                <td>Jak pečlivě jste kontroloval klíč, který právě podepisujete,
+                  že opravdu přísluší výše uvedené osobě? 
+                  <select name="signlevel">
+                    <option value="0">Nedokážu určit (výchozí) </option>
+                    <option value="1">Nekontroloval jsem </option>
+                    <option value="2">Zběžná kontrola </option>
+                    <option value="3">Velmi důkladná
+                    kontrola</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <hr size="1" noshade="noshade" width="100%" />
+
+          <p align="center" class="gpgdefaulttitle">Výchozí soukromý klíč</p>
+
+          <p>&nbsp;&nbsp;Vyber výše označený soukromý klíč jako výchozí pro podpis
+          a potom jej
+          <input type="submit" value="nastav jako výchozí"
+          name="setdefault" /></p>
+        </form>
+        <hr size="1" noshade="noshade" width="100%" />
+
+        <form method="post" action="[#p#]">
+          [#P#] <input type="hidden" name="form" value="gpgcreate" />
+
+          <p align="center" class="gpgcreatetitle">Vytvoř nový pár klíčů</p>
+
+          <table border="0" cellpadding="8">
+            <tbody>
+              <tr>
+                <td align="right">Jméno:</td>
+                <td><input type="text" size="20" name="newname" /></td>
+              </tr>
+              <tr>
+                <td align="right">E-mailová adresa:</td>
+                <td><input type="text" size="20" name="newaddress" /></td>
+              </tr>
+              <tr>
+                <td align="right">Poznámka:</td>
+                <td><input type="text" size="20" name="newcomment" /></td>
+              </tr>
+              <tr>
+                <td
+                align="right">Délka&nbsp;podpisovacího&nbsp;(DSA)&nbsp;klíče:</td>
+                <td>
+                  <select name="skeylength">
+                    <option value="512">512 bitů</option>
+                    <option value="768">768 bitů</option>
+                    <option value="1024" selected="selected">1024
+                    bitů</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  align="right">Délka&nbsp;šifrovacího&nbsp;(ElGamal)&nbsp;klíče:</td>
+                <td>
+                  <select name="ekeylength">
+                    <option value="512">512 bitů</option>
+                    <option value="768">768 bitů</option>
+                    <option value="1024" selected="selected">1024
+                    bitů</option>
+                    <option value="2048">2048 bitů</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td align="right">Vypršení:</td>
+                <td><input type="text" size="4" name="newexpire" /> 
+                  <select name="newexpirewhen">
+                    <option value="" selected="selected">-- bez vypršení--
+                    </option>
+                    <option value="d">dní </option>
+                    <option value="w">týdnů </option>
+                    <option value="m">měsíců </option>
+                    <option value="y">let</option>
+                  </select>
+                </td>
+              </tr>
+              <!-- [#?6#] -->
+              <tr>
+                <td align="right">Passphrase (volitelná):</td>
+                <td><input type="password" size="20" name="passphrase" /></td>
+              </tr>
+              <tr>
+                <td align="right">Ještě jednou:</td>
+                <td><input type="password" size="20" name="passphrase2"
+                /></td>
+              </tr>
+              <!-- [#?#] -->
+              <tr>
+                <td>&nbsp;</td>
+                <td>
+                  <input type="submit" value="Vytvoř" name="submit" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr style="line-height: 0">
+      <td align="left" valign="bottom">[#@bluebottomleft.png, width="11"
+        height="11" alt="" border="0"@@#]</td>
+      <td bgcolor="#99ccff" class="bluebox" valign="middle"></td>
+      <td align="right" valign="bottom">[#@bluebottomright.png, width="11"
+        height="11" alt="" border="0"@@#]</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>[#B#]</p>
+</body>
+</html>

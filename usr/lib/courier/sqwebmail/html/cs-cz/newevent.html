@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Nová událost</title>
+  <link rel="stylesheet" type="text/css" href="[#SQWEBMAILCSS#]" />
+  <meta name="GENERATOR" content="amaya 8.0, see http://www.w3.org/Amaya/" />
+  <meta name="MSSmartTagsPreventParsing" content="TRUE" />
+</head>
+
+<body>
+<!--
+[#$NOATTACH=Bez příloh...#]
+
+[#$QUOTAERR=<font style="color: #ff0000" size="+1" class="error">CHYBA: Přesáhli jste vaši kvótu</font><br /><br />#]
+[#$TIMEERR=<font style="color: #ff0000" size="+1" class="error">CHYBA: Zadáno neplatné datum/čas</font><br /><br />#]
+[#$NOTIMEERR=<font style="color: #ff0000" size="+1" class="error">CHYBA: Zadejte níže počáteční/koncový čas události:</font><br /><br />#]
+
+[#$CONFLICTERR=<font style="color: #ff0000" size="+1" class="error">CHYBA: Konflikt s jinou událostí</font><br /><br />#]
+
+[#$CONFLICTERR2=KONFLIKT UDÁLOSTÍ:&nbsp;#]
+
+[#$CALENDARERR=<font style="color: #ff0000" size="+1" class="error">CHYBA: Při ukládání události nastala následující chyba: <div style="margin-left: 3.5em;"><pre>%s</pre></div>Je-li kalendářová server nedostupný, uložte událost a zkuste se znovu přihlásit v hlavním menu.</font><br /><br />#]
+
+[#$LOCKERR=<font style="color: #ff0000" size="+1" class="error">CHYBA: Při zamykání kalendáře pro uložení změn nastala chyba. Prosím zkuste uložit znovu.</font><br /><br />#]
+
+[#$NOTFOUNDERR=<font style="color: #ff0000" size="+1" class="error">CHYBA: Nenalezena původní událost. Toto se může stát, když někdo jiný upraví stejnou událost. Prohlédněte si kalendář a upravte příslušnou událost.</font><br /><br />#]
+
+[#$EVENTLOCKEDERR=<font style="color: #ff0000" size="+1" class="error">CHYBA: Tato událost je momentálně uzamčena jinou úpravou. Prosím zkuste upravit znovu později.</font><br /><br />#]
+
+[#$CANCELLED=<span style="color: #ff0000">(ZRUŠENO)&nbsp;</span>#]
+[#$BOOKED=<span style="color: #ff0000">(UZAMČENO)&nbsp;</span>#]
+
+[#$REMOVE=Odstranit#]
+
+[#$RECURRING=Opakování:&nbsp;<select name="recurring"><option value="0">Týdně</option><option value="1">Měsíčně</option><option value="2">Ročně</option></select>#]
+
+-->
+
+<div align="center">
+<!-- Top Header -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="95%">
+  <tbody>
+    <tr style="line-height: 0">
+      <td align="left" valign="top"
+        style="line-height: 0">[#@graytopleft.png, width="11" height="11"
+        alt="" border="0"@@#]</td>
+      <td bgcolor="#cccccc" class="graybox"></td>
+      <td align="right" valign="top"
+        style="line-height: 0">[#@graytopright.png, width="11" height="11"
+        alt="" border="0"@@#]</td>
+    </tr>
+    <tr bgcolor="#cccccc" class="graybox">
+      <td>&nbsp;</td>
+      <td bgcolor="#cccccc" class="graybox" width="100%">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td align="left" width="100%" valign="middle"
+              class="pageheader">Nová&nbsp;událost</td>
+              <td align="right" valign="middle">[#G#]</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr style="line-height: 0">
+      <td align="left" valign="bottom">[#@graybottomleft.png, width="11"
+        height="11" alt="" border="0"@@#]</td>
+      <td bgcolor="#cccccc" class="graybox"></td>
+      <td align="right" valign="bottom">[#@graybottomright.png, width="11"
+        height="11" alt="" border="0"@@#]</td>
+    </tr>
+  </tbody>
+</table>
+<!-- End of Top Header -->
+<!-- Sections. Folders, Create Messages, Preferences, Etc. -->
+[#include:navbar#]
+
+<table cellpadding="0" cellspacing="0" border="0" width="95%">
+  <tbody>
+    <tr style="line-height: 0">
+      <td align="left" valign="top">[#@bluetopleft.png, width="11"
+        height="11" alt="" border="0"@@#]</td>
+      <td bgcolor="#99ccff" class="bluebox" valign="middle" width="100%"></td>
+      <td style="line-height: 0" align="right"
+        valign="top">[#@bluetopright.png, width="11" height="11" alt=""
+        border="0"@@#]</td>
+    </tr>
+    <tr bgcolor="#99ccff" class="bluebox">
+      <td></td>
+      <td valign="middle" width="100%">
+        <table width="100%" border="0" cellpadding="8">
+          <tbody>
+            <tr>
+              <td align="left" width="100%" valign="middle">[#NEWEVENT#]
+
+                <form method="post" action="[#p#]">
+                  [#P#]<input type="hidden" name="form" value="newevent"
+                  /><input type="hidden" name="today" value="today" /><input
+                  type="hidden" name="tomorrow" value="tomorrow" /><input
+                  type="hidden" name="draftmessage"
+                  value="[#input:draftmessage#]" />
+
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <th align="right">Událost&nbsp;začíná:</th>
+                        <td><input type="text" size="20" name="starttime"
+                        /></td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>
+                          <table border="0">
+                            <tbody>
+                              <tr valign="top">
+                                <td>Příklady:</td>
+                                <td><span class="tt">11:00</span> (dnes v 11h)<br />
+                                  <span class="tt">pátek&nbsp;9:00<br />
+                                  31&nbsp;srpen&nbsp;2015&nbsp;1:30<br />
+                                  8/31/2015&nbsp;4:00<br />
+                                  2015.08.31&nbsp;4:00</span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th align="right">[#RECURRING#]</th>
+                        <td width="100%"><b>do:</b><br /><input type="text" size="10"
+                          maxlength="10" name="endtime" /><span
+                          class="tt">&nbsp;MM/DD/YYYY</span></td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>(Zadáte-li koncové datum, půjde o opakující se
+                        událost)</td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <th align="right">Délka&nbsp;trvání:</th>
+                        <td><input type="text" size="2" maxlength="2"
+                          name="hours" value="1" /><span
+                          class="tt">hod&nbsp;</span><input type="text"
+                          size="2" maxlength="2" name="mins" value="0"
+                          /><span class="tt">min&nbsp;</span> 
+                          <input type="submit" value="Přidat čas(y) události"
+                          name="do.neweventtime" />&nbsp;&nbsp;<!-- [#?8#]-->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <th
+                        align="right">Přidat&nbsp;účastníka&nbsp;události:</th>
+                        <td><input type="text" size="20" name="participant1"
+                          />&nbsp;<font size="-1">(zadej e-mailovou
+                          adresu)</font>, nebo:</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>[#ABOOKNAMELIST#]</td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>
+                          <input type="submit" value="Přidat účastníka"
+                          name="do.addparticipant" />&nbsp;&nbsp;<!-- [#?#]-->
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </form>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <hr width="80%" />
+        [#EVENTSTART#]
+
+        <form method="post" action="[#p#]" enctype="multipart/form-data">
+          [#P#]<input type="hidden" name="form" value="newevent" /><input
+          type="hidden" name="draftmessage" value="[#input:draftmessage#]" />
+
+          <table width="100%" border="0" cellpadding="8">
+            <tbody>
+              <tr valign="top">
+                <th align="right">Čas(y)&nbsp;události:&nbsp;</th>
+                <td width="100%">[#EVENTTIMES#]</td>
+              </tr>
+              <tr>
+                <th align="right">Od:&nbsp;</th>
+                <td>[#EVENTFROM#]<!-- [#?8#]-->
+                </td>
+              </tr>
+              <tr valign="top">
+                <th align="right">Účastníci:&nbsp;</th>
+                <td width="100%">[#EVENTPARTICIPANTS#]<!-- [#?#]-->
+                </td>
+              </tr>
+              <tr>
+                <th align="right">Předmět:&nbsp;</th>
+                <td><input type="text" size="60" name="headersubject"
+                  value="[#input:headersubject#]" /></td>
+              </tr>
+              <tr>
+                <th valign="top" align="right">Popis:&nbsp;</th>
+                <td>[#EVENTTEXT#]
+                  <hr width="80%" />
+
+                  <table width="100%" bgcolor="#000080" border="0"
+                  cellpadding="4" cellspacing="0" class="attachments-header">
+                    <tbody>
+                      <tr>
+                        <th align="left"><span style="color: #ffff00"
+                          class="attachments-header">&nbsp;&nbsp;&nbsp;&nbsp;Přílohy
+                          události:</span></th>
+                        <th align="right"><span style="color: #ffff00"
+                          class="attachments-header">Velikost</span></th>
+                      </tr>
+                    </tbody>
+                  </table>
+                  [#EVENTATTACH#] 
+                  <input type="submit" value="&nbsp;Smaž přílohu "
+                  name="do.neweventdeleteattach" />
+
+                  <table border="0">
+                    <tbody>
+                      <tr valign="middle">
+                        <td align="right">Příloha:&nbsp;<input type="file"
+                          size="20" name="uploadfile" /></td>
+                        <td>
+                          <input type="submit" value="nahraj"
+                          name="do.neweventupload" /></td>
+                        <td><label><input type="checkbox"
+                          name="attach_inline" />Zobrazit přílohu
+                          v textu</label> <!-- [#?5#]-->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="right">
+                          <select name="pubkey">
+                            <option selected="selected"></option>[#ATTACHPUB#]
+                          </select>
+                        </td>
+                        <td colspan="2">
+                          <input type="submit" value="Připojit veřejný klíč"
+                          name="do.neweventuppubkey" /></td>
+                      </tr>
+                      <tr valign="top">
+                        <td align="right">
+                          <select name="privkey">
+                            <option selected="selected"></option>[#ATTACHSEC#]
+                          </select>
+                        </td>
+                        <td colspan="2">
+                          <input type="submit" value="Připojit soukromý klíč"
+                          name="do.neweventupprivkey" /><br />
+                          <input type="checkbox" name="really"
+                          />&nbsp;Ano,&nbsp;opravdu&nbsp;to&nbsp;chci&nbsp;udělat&nbsp;<!-- [#?#]-->
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <input type="submit" value="Náhled"
+                          name="do.neweventpreview" /></td>
+                        <td>
+                          <input type="submit" value="Uložit/odložit"
+                          name="do.neweventpostpone" /></td>
+                        <td>
+                          <input type="submit" value="Přidat do kalendáře"
+                          name="do.neweventsave" /></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td><label><input type="checkbox" name="okconflict"
+                  />Ignorovat&nbsp;konflikty&nbsp;s&nbsp;jinými&nbsp;událostmi</label>
+                  <!-- [#?8#]-->
+                </td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td><label><input type="checkbox" name="okerrors" />Ignorovat
+                  chyby při úpravě kalendářů ostatních účastníků<br />
+                  <span class="tt">&nbsp;&nbsp;&nbsp;&nbsp;</span><font
+                  size="-2">(a odstranit tyto účastníky
+                  z události)</font></label>
+                  <!-- [#?#]-->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </td>
+      <td></td>
+    </tr>
+    <tr style="line-height: 0">
+      <td align="left" valign="bottom">[#@bluebottomleft.png, width="11"
+        height="11" alt="" border="0"@@#]</td>
+      <td bgcolor="#99ccff" class="bluebox" valign="middle"></td>
+      <td align="right" valign="bottom">[#@bluebottomright.png, width="11"
+        height="11" alt="" border="0"@@#]</td>
+    </tr>
+  </tbody>
+</table>
+[#EVENTEND#]</div>
+
+<p>[#B#]</p>
+</body>
+</html>

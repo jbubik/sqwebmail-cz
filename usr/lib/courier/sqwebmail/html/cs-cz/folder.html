@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html" />
+  <title>Obsah složky</title>
+  <link rel="stylesheet" type="text/css" href="[#SQWEBMAILCSS#]" />
+  <meta name="generator" content="Bluefish 2.0.2" />
+  <meta name="MSSmartTagsPreventParsing" content="TRUE" />
+</head>
+
+<body>
+
+<script language="javascript" type="text/javascript">
+
+function ff(s) {
+	var e;
+
+	if (document.getElementById)
+	{
+		e=document.getElementById(s);
+	}
+	else if (document.all)
+	{
+		e=document[s];
+	}
+
+	return e;
+}
+
+function setsel(c,r,s) {
+
+	var x=ff(r);
+	var v=ff(c);
+
+	if (v != null && x != null)
+	{
+		if (v.checked)
+		{
+			x.className="folder-index-bg-sel";
+		}
+		else
+		{
+			x.className=s;
+		}
+	}
+
+}
+
+function deleteAll() {
+	if (confirm("Opravdu chcete smazat všechny zprávy z této složky?"))
+	{
+		return true;
+	}
+	return false;
+}
+
+</script>
+
+<!--
+
+[#$DSPFMT_YDATE=%_d %b %Y#]
+[#$DSPFMT_WDATE=%a %H:%M#]
+
+[#$NUM=<span style="color: #ffff00" class="folder-index-header">#</span>#]
+[#$DATE=<span style="color: #ffff00" class="folder-index-header">Datum</span>#]
+[#$FROM=<span style="color: #ffff00" class="folder-index-header">Od</span><br />#]
+[#$TO=<span style="color: #ffff00" class="folder-index-header">Komu</span><br />#]
+[#$SUBJECT=<span style="color: #ffff00" class="folder-index-header">Předmět</span>#]
+[#$SIZE=<span style="color: #ffff00" class="folder-index-header">Velikost</span><br />#]
+[#$FOLDERTITLE=Složka - #]
+[#$SEARCHRESULTSTITLE=Výsledky hledání - #]
+[#$SHOWNCOUNT=Zobrazeno: %ld&nbsp;-&nbsp;%ld z %ld#]
+[#$RETURNTOFOLDER=Zpět do složky#]
+[#$LASTMESSAGESEARCHED=Poslední prohledávaná zpráva je č.%ld#]
+[#$JUMPTO=Běž na:#]
+[#$NOMESSAGES=Žádné zprávy...#]
+[#$DELETE=Smaž#]
+[#$PURGEALL=Smaž všechny#]
+[#$PURGE=Smaž vybrané#]
+[#$ORMOVETO=, nebo přesuň do:#]
+[#$GO=Proveď#]
+[#$FIRSTPAGE=@@first.png, width="48" height="24" alt="První str." title="První str."@First@#]
+[#$PREVPAGE=@@left.png, width="48" height="24" alt="Předch. str." title="Předch. str."@Prev@#]
+[#$NEXTPAGE=@@right.png, width="48" height="24" alt="Násl. str." title="Násl. str."@Next@#]
+[#$LASTPAGE=@@last.png, width="48" height="24" alt="Posl. str." title="Posl. str."@Last@#]
+[#$SELECTALL=Označit všechny zobrazené#]
+[#$UNSELECTALL=Zrušit označení u zobrazených#]
+[#$INBOX=Doručená#]
+[#$DRAFTS=Rozepsaná#]
+[#$TRASH=Koš#]
+[#$SENT=Odeslaná#]
+[#$PUBLICFOLDERS=<em>Veřejné složky</em>#]
+[#$PERMERR=<span class="error">CHYBA: Nemáte práva vytvářet zprávy v této složce, nebo jste překročili kvótu.</span>#]
+[#$NODELPERM=<span class="error">CHYBA: Nemáte práva mazat zprávy v této složce.</span>#]
+[#$NOINSERTPERM=<span class="error">CHYBA: Nemáte práva vkládat zprávy do cílové složky.</span>#]
+[#$OTHERERROR=<span class="error">CHYBA: Vyskytla se chyba, prosím zkuste to znovu nebo kontaktujte administrátora systému.</span>#]
+[#$ACL=<span class="error">CHYBA: Nemáte práva otevírat tuto složku.</span>#]
+
+-->
+
+<div align="center">
+<!-- Top Header -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="95%">
+  <tbody>
+    <tr style="line-height: 0">
+      <td align="left" valign="top"
+        style="line-height: 0">[#@graytopleft.png, width="11" height="11"
+        alt="" border="0"@@#]</td>
+      <td bgcolor="#cccccc" class="graybox"></td>
+      <td align="right" valign="top"
+        style="line-height: 0">[#@graytopright.png, width="11" height="11"
+        alt="" border="0"@@#]</td>
+    </tr>
+    <tr bgcolor="#cccccc" class="graybox">
+      <td>&nbsp;</td>
+      <td bgcolor="#cccccc" class="graybox" width="100%">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td align="left" width="100%" valign="middle"
+              class="pageheader">[#f#]</td>
+              <td align="right" valign="middle">[#G#]</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr style="line-height: 0">
+      <td align="left" valign="bottom">[#@graybottomleft.png, width="11"
+        height="11" alt="" border="0"@@#]</td>
+      <td bgcolor="#cccccc" class="graybox"></td>
+      <td align="right" valign="bottom">[#@graybottomright.png, width="11"
+        height="11" alt="" border="0"@@#]</td>
+    </tr>
+  </tbody>
+</table>
+<!-- End of Top Header -->
+<!-- Sections. Folders, Create Messages, Preferences, Etc. -->
+[#include:navbar2#] <!-- Border around the folders list -->
+
+
+<div class="folder-index-box">
+
+<form method="post" name="delete" action="[#p#]">
+  [#P#]<input type="hidden" name="form" value="folderdel" />
+  <table border="0" width="100%" bgcolor="#000000" cellpadding="2"
+  cellspacing="2" class="folder-index-background">
+    <tbody>
+      <tr>
+        <td bgcolor="#ffffff" class="folder-index-background-2">[#F#]</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- ===========  -->
+
+  <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tbody>
+      <tr style="line-height: 0">
+        <td align="left" valign="top">[#@bluetopleft.png, width="11"
+          height="11" alt="" border="0"@@#]</td>
+        <td bgcolor="#99ccff" class="bluebox" valign="middle"
+        width="100%"></td>
+        <td style="line-height: 0" align="right"
+          valign="top">[#@bluetopright.png, width="11" height="11" alt=""
+          border="0"@@#]</td>
+      </tr>
+      <tr>
+        <td bgcolor="#99ccff" class="bluebox"></td>
+        <td bgcolor="#99ccff" class="bluebox" valign="middle" width="100%">
+          <table border="0" width="100%">
+            <tbody>
+              <tr>
+                <td align="left" width="100%" valign="middle">[#T#]</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+        <td bgcolor="#99ccff" class="bluebox"></td>
+      </tr>
+      <tr style="line-height: 0">
+        <td align="left" valign="bottom">[#@bluebottomleft.png, width="11"
+          height="11" alt="" border="0"@@#]</td>
+        <td bgcolor="#99ccff" class="bluebox" valign="middle"></td>
+        <td align="right" valign="bottom">[#@bluebottomright.png, width="11"
+          height="11" alt="" border="0"@@#]</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- ============ -->
+</form>
+<br />
+<form method="post" name="search" action="[#p#]">
+  [#P#]<input type="hidden" name="form" value="folder" />
+  <input type="hidden" name="pos" value="[#input:pos#]" />
+
+  <!-- ===========  -->
+
+  <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tbody>
+      <tr style="line-height: 0">
+        <td align="left" valign="top">[#@bluetopleft.png, width="11"
+          height="11" alt="" border="0"@@#]</td>
+        <td bgcolor="#99ccff" class="bluebox" valign="middle"
+        width="100%"></td>
+        <td style="line-height: 0" align="right"
+          valign="top">[#@bluetopright.png, width="11" height="11" alt=""
+          border="0"@@#]</td>
+      </tr>
+      <tr>
+        <td bgcolor="#99ccff" class="bluebox"></td>
+        <td bgcolor="#99ccff" class="bluebox" valign="middle" width="100%">
+          <table border="0" width="100%">
+            <tbody>
+	      <tr>
+                <td align="left" width="100%" valign="middle">Hledej v této složce od zprávy č.[#MSGPOS#]: <input type="text" name="searchtxt" width="20" /><input type="submit" name="do.search" value="Hledej" /></td>
+	      </tr>
+            </tbody>
+          </table>
+        </td>
+        <td bgcolor="#99ccff" class="bluebox"></td>
+      </tr>
+      <tr style="line-height: 0">
+        <td align="left" valign="bottom">[#@bluebottomleft.png, width="11"
+          height="11" alt="" border="0"@@#]</td>
+        <td bgcolor="#99ccff" class="bluebox" valign="middle"></td>
+        <td align="right" valign="bottom">[#@bluebottomright.png, width="11"
+          height="11" alt="" border="0"@@#]</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- ============ -->
+</form>
+
+</div>
+</div>
+
+<p>[#B#]</p>
+</body>
+</html>

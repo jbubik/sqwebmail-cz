@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Nastavení</title>
+  <link rel="stylesheet" type="text/css" href="[#SQWEBMAILCSS#]" />
+  <meta name="GENERATOR" content="amaya 8.0, see http://www.w3.org/Amaya/" />
+  <meta name="MSSmartTagsPreventParsing" content="TRUE" />
+</head>
+
+<body>
+<!--
+
+[#$PWDERR=<p class="error">CHYBA: Nemohu změnit heslo.  Možné důvody, proč nešlo heslo změnit jsou:</p><ul class="error"><li>špatně zadané původní heslo</li><li>nové heslo nebylo zadáno dvakrát stejně</li><li>vaše nové heslo je příliš krátké nebo je obsaženo ve slovníku - taková hesla nejsou dovolena</li><li>vaše nové heslo obsahuje nepovolené znaky</li></ul>#]
+[#$PWDOK=<p class="success">Heslo úspěšně změněno!</p>#]
+[#$PREFSOK=<p class="success">Vaše nastavení bylo úspěšně uloženo!</p>#]
+[#$DATE=Datum#]
+[#$SENDER=Odesílatel#]
+[#$SUBJECT=Předmět#]
+
+-->
+
+<div align="center">
+<!-- Top Header -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="95%">
+  <tbody>
+    <tr style="line-height: 0">
+      <td align="left" valign="top"
+        style="line-height: 0">[#@graytopleft.png, width="11" height="11"
+        alt="" border="0"@@#]</td>
+      <td bgcolor="#cccccc" class="graybox"></td>
+      <td align="right" valign="top"
+        style="line-height: 0">[#@graytopright.png, width="11" height="11"
+        alt="" border="0"@@#]</td>
+    </tr>
+    <tr bgcolor="#cccccc" class="graybox">
+      <td>&nbsp;</td>
+      <td bgcolor="#cccccc" class="graybox" width="100%">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td align="left" width="100%" valign="middle"
+              class="pageheader">Nastavení</td>
+              <td align="right" valign="middle">[#G#]</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr style="line-height: 0">
+      <td align="left" valign="bottom">[#@graybottomleft.png, width="11"
+        height="11" alt="" border="0"@@#]</td>
+      <td bgcolor="#cccccc" class="graybox"></td>
+      <td align="right" valign="bottom">[#@graybottomright.png, width="11"
+        height="11" alt="" border="0"@@#]</td>
+    </tr>
+  </tbody>
+</table>
+<!-- End of Top Header -->
+<!-- Sections. Folders, Create Messages, Preferences, Etc. -->
+[#include:navbar#]
+
+<table cellpadding="0" cellspacing="0" border="0" width="75%">
+  <tbody>
+    <tr style="line-height: 0">
+      <td align="left" valign="top">[#@bluetopleft.png, width="11"
+        height="11" alt="" border="0"@@#]</td>
+      <td bgcolor="#99ccff" class="bluebox" valign="middle" width="100%"></td>
+      <td style="line-height: 0" align="right"
+        valign="top">[#@bluetopright.png, width="11" height="11" alt=""
+        border="0"@@#]</td>
+    </tr>
+    <tr>
+      <td bgcolor="#99ccff" class="bluebox"></td>
+      <td bgcolor="#99ccff" class="bluebox" valign="middle" width="100%"><!-- here -->
+
+        <form method="post" name="preferences" action="[#R#]">
+          [#P#]<input type="hidden" name="form" value="preferences" />[#x#]
+
+          <table border="0" cellspacing="0" cellpadding="4" bgcolor="#99ccff" class="bluebox"
+          width="100%">
+            <tbody>
+              <tr>
+                <td><!--
+
+                  Start of preferences box
+                  -->
+
+                  <table border="0" cellspacing="8" cellpadding="4"
+                  width="100%">
+                    <tbody>
+                      <tr>
+                        <td>[#z#]</td>
+                        <td width="100%"><label for="fullheaders">Zobrazovat
+                          kompletní hlavičky zpráv</label></td>
+                      </tr>
+                      <tr>
+                        <td>[#H#]</td>
+                        <td><label for="doshowhtml">Zobrazovat HTML
+                          e-maily</label></td>
+                      </tr>
+                      <tr>
+                        <td>[#FLOWEDTEXT#]</td>
+                        <td><label for="noflowedtext">Nezobrazovat e-maily
+                          s textem přetékajícím přes více řádků</label></td>
+                      </tr>
+                      <tr>
+                        <td>[#NOARCHIVE#]</td>
+                        <td><label for="noarchive">Neukládat odeslané zprávy do složky
+                          Odeslané</label></td>
+                      </tr>
+                      <tr>
+                        <td>[#NOAUTORENAMESENT#]</td>
+                        <td><label for="noautorenamesent">Nepřejmenovávat každý měsíc
+                          složku Odeslané</label></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>Automaticky vyhazovat z Koše smazané zprávy po [#v#]
+                          dnech.<br />
+                          (nastavte na nulu, pokud toto chcete vypnout)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr width="90%" />
+
+                  <table border="0" cellspacing="8" cellpadding="4">
+                    <tbody>
+                      <!-- [#?7#] Calendar 
+
+                      <td></td>
+                      <td></td>
+                      <td></td>
+
+                      <td></td>
+                      <td></td>
+                      <td></td>
+
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      -->
+                       <tr>
+                        <td></td>
+                        <td>Týden v kalendáři začíná dnem:</td>
+                        <td>[#PREFWEEK#]</td>
+                        <td width="100%"></td>
+                      </tr>
+                      <!-- [#?#] -->
+                      <tr>
+                        <td></td>
+                        <td>Zprávy třídit podle:</td>
+                        <td>[#w#]</td>
+                        <td width="100%"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>Zpráv na stránku:</td>
+                        <td>[#u#]</td>
+                        <td width="100%"></td>
+                      </tr>
+                      <tr>
+                        <td>[#y#]</td>
+                        <td colspan="2"><label for="oldest1st">Zobrazovat zprávy
+                          od nejstarších</label></td>
+                        <td width="100%"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td colspan="2"><br />
+                          <br />
+                          Automatický podpis:
+
+			   <p><textarea style="font-family: courier;" 
+				cols="40" rows="4" name="signature" 
+				wrap="off">[#t#]</textarea>
+			   </p>
+                        </td>
+                        <td width="100%"></td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td colspan="2"><br />
+                          <br />
+
+
+                          <div align="center">
+                          E-mailové konference</div>
+
+                          <p>Zadejte adresy mailových konferencí, které
+			  odebíráte (na jednotlivé řádky): <textarea 
+			      style="font-family: courier;" cols="40" 
+			      rows="4" name="mailinglists" 
+			      wrap="soft">[#MAILINGLISTS#]</textarea>
+			  </p>
+                        </td>
+                        <td width="100%"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <div align="center">
+
+                  <table border="0" cellspacing="0" cellpadding="4">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <input type="submit"
+                          value="Uložit&nbsp;nastavení"
+                          name="do.changeprefs" /></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                  <!--
+
+                  Do not remove the following code, which causes password entry to be
+                  omitted if configured with enable-webpass=no
+
+                  [#?0#]
+
+                  -->
+                  <hr width="90%" />
+                  <br />
+
+
+                  <table width="100%" border="0">
+                    <tbody>
+                      <tr>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td>
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td colspan="2" align="center"><font
+                                  size="+1">Změna hesla poštovního účtu</font> <br />
+                                  <br />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="right">Původní&nbsp;heslo:</td>
+                                <td><input type="password" size="16"
+                                  name="oldpass" maxlength="128" /></td>
+                              </tr>
+                              <tr>
+                                <td align="right">Nové&nbsp;heslo:</td>
+                                <td><input type="password" size="16"
+                                  name="newpass" maxlength="128" /></td>
+                              </tr>
+                              <tr>
+                                <td
+                                  align="right">Nové&nbsp;heslo&nbsp;znovu:</td>
+                                <td><input type="password" size="16"
+                                  name="newpass2" maxlength="128" /></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td width="100%"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <div align="center">
+
+                  <table border="0" cellspacing="0" cellpadding="4">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <input type="submit" value="Změnit heslo"
+                          name="do.changepwd" /></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                  <!--
+
+                  [#?#]
+
+                  -->
+                  <!-- [#?8#] -->
+                  <hr />
+
+                  <div align="center">
+                  <a href="[#s#]&amp;form=eventacl">Přístup ke
+                  kalendářům</a></div>
+                  <!-- [#?#] -->
+                  <!--
+
+                  End of preferences box
+
+                  -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </td>
+      <td bgcolor="#99ccff" class="bluebox"></td>
+    </tr>
+    <tr style="line-height: 0">
+      <td align="left" valign="bottom">[#@bluebottomleft.png, width="11"
+        height="11" alt="" border="0"@@#]</td>
+      <td bgcolor="#99ccff" class="bluebox" valign="middle"></td>
+      <td align="right" valign="bottom">[#@bluebottomright.png, width="11"
+        height="11" alt="" border="0"@@#]</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>[#B#]</p>
+</body>
+</html>

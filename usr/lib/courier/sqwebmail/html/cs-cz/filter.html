@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content="Bluefish 2.0.1" />
+  <meta name="MSSmartTagsPreventParsing" content="TRUE" />
+  <title>Filtrování pošty</title>
+  <link rel="stylesheet" type="text/css" href="[#SQWEBMAILCSS#]" />
+</head>
+
+<body>
+<!--
+
+[#$BADIMPORT=<span style="color: #ee0000">CHYBA: Máte nekompatibilní filtr pošty, kontaktujte administrátora systému</span><br />#]
+[#$BADRULENAME=<span style="color: #ee0000">CHYBA: Neplatný nebo neexistující název pravidla, zadejte prosím znovu</span><br />#]
+[#$EXISTS=<span style="color: #ee0000">CHYBA: Název pravidla již existuje, zadejte prosím znovu něco jiného</span><br />#]
+[#$BADHEADER=<span style="color: #ee0000">CHYBA: Neplatný nebo neexistující název hlavičky, zadejte prosím znovu</span><br />#]
+[#$AUTOREPLY=<span style="color: #ee0000">CHYBA: Neplatný nebo neexistující název automatické odpovědi, zadejte prosím znovu</span><br />#]
+[#$BADVALUE=<span style="color: #ee0000">CHYBA: Neplatný nebo neexistující vzorek hlavičky nebo adresa příjemce, zadejte prosím znovu</span><br />#]
+[#$ERRTOFOLDER=<span style="color: #ee0000">CHYBA: Neplatná nebo neexistující složka, přeposílací adresa nebo chybové hlášení, zadejte prosím znovu</span><br />#]
+[#$FROMHDR=<span style="color: #ee0000">CHYBA: Neplatné znaky v zadané hlavičce <span class="tt">From:</span>, zadejte prosím znovu</span><br />#]
+[#$INTERNAL=<span style="color: #ee0000">CHYBA: Nelze uložit pravidlo - kontaktujte administrátora systému</span><br />#]
+[#$UPDATED=<span style="color: #008000">Byly uloženy následující filtry:</span><br />#]
+[#$INBOX=Doručená#]
+[#$DRAFTS=Rozepsaná#]
+[#$TRASH=Koš#]
+[#$SENT=Odeslaná#]
+
+-->
+
+<div align="center">
+<!-- Top Header. Shows folder list and email address. -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="95%">
+  <tbody>
+    <tr style="line-height: 0">
+      <td align="left" valign="top"
+        style="line-height: 0">[#@graytopleft.png, width="11" height="11"
+        alt="" border="0"@@#]</td>
+      <td bgcolor="#cccccc" class="graybox"></td>
+      <td align="right" valign="top"
+        style="line-height: 0">[#@graytopright.png, width="11" height="11"
+        alt="" border="0"@@#]</td>
+    </tr>
+    <tr bgcolor="#cccccc" class="graybox">
+      <td>&nbsp;</td>
+      <td bgcolor="#cccccc" class="graybox" width="100%">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td align="left" width="100%" valign="middle"
+              class="pageheader">Filtrování pošty</td>
+              <td align="right" valign="middle">[#G#]</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr style="line-height: 0">
+      <td align="left" valign="bottom">[#@graybottomleft.png, width="11"
+        height="11" alt="" border="0"@@#]</td>
+      <td bgcolor="#cccccc" class="graybox"></td>
+      <td align="right" valign="bottom">[#@graybottomright.png, width="11"
+        height="11" alt="" border="0"@@#]</td>
+    </tr>
+  </tbody>
+</table>
+<!-- End of Top Header -->
+<!-- Sections. Folders, Create Messages, Preferences, Etc. -->
+[#include:navbar3#] <!-- End of List of Sections. Folders, Create Messages, Etc. -->
+ <!-- Border around the folders list -->
+
+
+<form method="post" action="[#R#]">
+  [#P#]<input type="hidden" name="form" value="filter" />
+
+  <table cellpadding="0" cellspacing="0" border="0" width="95%">
+    <tbody>
+      <tr style="line-height: 0">
+        <td align="left" valign="top">[#@bluetopleft.png, width="11"
+          height="11" alt="" border="0"@@#]</td>
+        <td bgcolor="#99ccff" class="bluebox" valign="middle" width="100%"></td>
+        <td style="line-height: 0" align="right"
+          valign="top">[#@bluetopright.png, width="11" height="11" alt=""
+          border="0"@@#]</td>
+      </tr>
+      <tr>
+        <td bgcolor="#99ccff" class="bluebox"></td>
+        <td bgcolor="#99ccff" class="bluebox" valign="middle">
+          <table border="0" cellpadding="4" cellspacing="0" width="100%"
+          class="mailfilter">
+            <tbody>
+              <tr>
+                <td align="center"><font size="+1"
+                  class="mailfilter-title">Existující filtry pošty:</font></td>
+              </tr>
+              <tr valign="middle">
+                <td>
+                  <table border="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td align="center">[#LOADMAILFILTER#] 
+                          <select name="currentfilter"
+                            size="8">[#MAILFILTERLIST#]
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center">
+                          <input type="submit" value="Nahoru" name="do.moveup" /> 
+                          <input type="submit" value="Dolů"
+                          name="do.movedown" /> 
+                          <input type="submit" value="Edituj" name="do.edit" /> 
+                          <input type="submit" value="Smaž"
+                          name="do.delete" /> 
+                          <input type="submit" value="Přidej" name="do.add"
+                        /></td>
+                      </tr>
+                      <tr>
+                        <td align="center">
+                          <input type="submit" value="Uložit všechny změny"
+                          name="do.save" /></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td><hr width="90%" />
+                </td>
+              </tr>
+              <tr>
+                <td align="center"><font size="+1"
+                  class="mailfilter-title">Edituj/přidej poštovní filtr</font></td>
+              </tr>
+              <tr>
+                <td>
+                  <table border="0">
+                    <tbody>
+                      <tr>
+                        <td>Název&nbsp;pravidla:</td>
+                        <td><input type="text" size="20" name="rulename"
+                          value="[#input:rulename#]" /></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td colspan="0"><hr width="100%" />
+                        </td>
+                      </tr>
+                      <tr valign="middle">
+                        <td>Podmínka:</td>
+                        <td>
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td>[#radio:filtertype:header#]</td>
+                                <td>
+                                  <table border="0" cellpadding="0">
+                                    <tbody>
+                                      <tr>
+                                        <td rowspan="2">Hlavička&nbsp;<input
+                                          type="text" size="20"
+                                          value="[#input:headername#]"
+                                          name="headername"
+                                          />,&nbsp;nebo&nbsp;[#radio:filtertype:body#]&nbsp;tělo</td>
+                                        <td>[#select:headermatchtype#]
+                                          [#option:startswith:headermatch:startswith#]
+                                          začíná na [#endoption#]
+                                          [#option:contains:headermatch:contains#]
+                                          obsahuje [#endoption#]
+                                          [#option:endswith:headermatch:endswith#]
+                                          končí na [#endoption#]
+                                          [#option:notstartswith:headermatch:notstartswith#]
+                                          nezačíná na [#endoption#]
+                                          [#option:notcontains:headermatch:notcontains#]
+                                          neobsahuje [#endoption#]
+                                          [#option:notendswith:headermatch:notendswith#]
+                                          nekončí na [#endoption#]
+                                          [#endselect#]</td>
+                                        <td><input type="text" size="20"
+                                          name="headervalue"
+                                          value="[#input:headervalue#]"
+                                        /></td>
+                                      </tr>
+                                      <tr>
+                                        <td
+                                          align="right">[#checkbox:autoresponse_regexp:autoresponse_regexp#]</td>
+                                        <td>toto&nbsp;je&nbsp;regulární&nbsp;výraz&nbsp;(vzorek)</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>[#radio:filtertype:anymessage#]</td>
+                                <td>Jakákoli&nbsp;zpráva</td>
+                              </tr>
+                              <tr>
+                                <td>[#radio:filtertype:hasrecipient#]</td>
+                                <td>[#select:hasrecipienttype#]
+                                  [#option:hasrecipient:hasrecipienttype:hasrecipient#]
+                                  Adresováno [#endoption#]
+                                  [#option:nothasrecipient:hasrecipienttype:nothasrecipient#]
+                                  Neadresováno [#endoption#]
+                                  [#endselect#] &nbsp;<input type="text"
+                                  size="20" name="hasrecipientaddr"
+                                  value="[#input:hasrecipientaddr#]" /></td>
+                              </tr>
+                              <tr>
+                                <td>[#radio:filtertype:hastextplain#]</td>
+                                <td>Je&nbsp;obyčejná&nbsp;textová&nbsp;zpráva</td>
+                              </tr>
+                              <tr>
+                                <td>[#radio:filtertype:nothastextplain#]</td>
+                                <td>Není&nbsp;obyčejná&nbsp;textová&nbsp;zpráva&nbsp;(HTML,&nbsp;přílohy,&nbsp;...)</td>
+                              </tr>
+                              <tr>
+                                <td>[#radio:filtertype:hasmultipart#]</td>
+                                <td>Je&nbsp;zpráva&nbsp;o&nbsp;více&nbsp;MIME&nbsp;částech</td>
+                              </tr>
+                              <tr>
+                                <td>[#radio:filtertype:nothasmultipart#]</td>
+                                <td>Není&nbsp;zpráva&nbsp;o&nbsp;více&nbsp;MIME&nbsp;částech</td>
+                              </tr>
+                              <tr>
+                                <td>[#radio:filtertype:hassize#]</td>
+                                <td>Zpráva je [#select:sizecompare#]
+                                  [#option:islargerthan:sizecompare:islargerthan#]
+                                  větší než [#endoption#]
+                                  [#option:issmallerthan:sizecompare:issmallerthan#]
+                                  menší než [#endoption#] [#endselect#]
+                                  <input type="text" size="8"
+                                  name="bytecount"
+                                  value="[#input:bytecount#]" /> bytů</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td colspan="0"><hr width="100%" />
+                        </td>
+                      </tr>
+                      <tr valign="middle">
+                        <td>Akce:</td>
+                        <td>
+                          <table border="0">
+                            <tbody>
+                              <tr>
+                                <td>[#radio:action:savefolder#]</td>
+                                <td>Uložit&nbsp;do:</td>
+                                <td>[#MAILFILTERLISTFOLDERS#]</td>
+                                <td
+                                  rowspan="2">[#checkbox:continuefiltering:continuefiltering#]&nbsp;a&nbsp;pokračovat&nbsp;ve&nbsp;zpracování.</td>
+                              </tr>
+                              <tr>
+                                <td>[#radio:action:forwardto#]</td>
+                                <td>Přeposlat&nbsp;na:</td>
+                                <td><input type="text" size="20"
+                                  name="forwardaddy"
+                                  value="[#input:forwardaddy#]" /></td>
+                              </tr>
+                              <tr>
+                                <td colspan="4">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td>[#radio:action:bounce#]</td>
+                                <td>Zamítnout&nbsp;s&nbsp;chybou:</td>
+                                <td colspan="2"><input type="text" size="20"
+                                  name="bouncemsg"
+                                  value="[#input:bouncemsg#]" /></td>
+                              </tr>
+                              <tr valign="top">
+                                <td>[#radio:action:autoresponse#]</td>
+                                <td>Poslat automatickou odpověď:</td>
+                                <td
+                                  colspan="2">[#select:autoresponse_choose#]
+                                  [#option:#][#endoption#]
+                                  [#AUTORESPONSE_PICK#] [#endselect#] <br />
+                                  [#checkbox:autoresponse_dsn:autoresponse_dsn#]Používat pro
+                                  automatické odpovědi formát zpráv DSN<br />
+                                  [#checkbox:autoresponse_dupe:autoresponse_dupe#]Neposílat
+                                  automatickou odpověď jednomu odesílateli častěji než jednou za <input
+                                  type="text" size="4"
+                                  name="autoresponse_days"
+                                  value="[#input:autoresponse_days#]"
+                      	          />dny<br />
+                                  [#checkbox:autoresponse_noquote:autoresponse_noquote#]Nezahrnovat původní text
+                                  do automatické odpovědi</td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td>Nastavit hlavičku <span class="tt">From:</span>
+                                  na hodnotu:</td>
+                                <td colspan="2"><input type="text" size="20"
+                                  name="autoresponse_from"
+                                  value="[#input:autoresponse_from#]" /></td>
+                              </tr>
+                              <tr>
+                                <td>[#radio:action:purge#]</td>
+                                <td>Odstranit</td>
+                                <td colspan="2">&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td colspan="0"><hr width="100%" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td colspan="0">
+                          <input type="submit" value="Odeslat"
+                          name="do.submitfilter" /></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td><hr width="90%" />
+                </td>
+              </tr>
+              <tr>
+                <td align="center">DŮLEŽITÉ: Všechno <strong>MUSÍTE</strong> ještě
+                  potvrdit tlačítkem "Uložit všechny změny", aby se změny
+                  promítly.</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+        <td bgcolor="#99ccff" class="bluebox"></td>
+      </tr>
+      <tr style="line-height: 0">
+        <td align="left" valign="bottom">[#@bluebottomleft.png, width="11"
+          height="11" alt="" border="0"@@#]</td>
+        <td bgcolor="#99ccff" class="bluebox" valign="middle"></td>
+        <td align="right" valign="bottom">[#@bluebottomright.png, width="11"
+          height="11" alt="" border="0"@@#]</td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+</div>
+
+<p>[#B#]</p>
+</body>
+</html>

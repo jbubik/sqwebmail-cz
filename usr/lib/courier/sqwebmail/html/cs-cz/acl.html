@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html" />
+  <title>Práva ke složce</title>
+  <link rel="stylesheet" type="text/css" href="[#SQWEBMAILCSS#]" />
+  <meta name="GENERATOR" content="amaya 8.8.1, see http://www.w3.org/Amaya/"
+  />
+  <meta name="MSSmartTagsPreventParsing" content="TRUE" />
+  <script type="text/javascript" language="Javascript">
+<!--
+
+function updent()
+{
+	if (document.form1.entitytype.value == "user"
+		|| document.form1.entitytype.value == "group"
+		|| document.form1.entitytype.value == "other")
+	{
+		document.form1.entity.disabled=false;
+	}
+	else
+	{
+		document.form1.entity.disabled=true;
+		document.form1.entity.value="";
+	}
+}
+//-->
+
+
+
+
+  </script>
+</head>
+
+<body onload="javascript:updent()">
+<!--
+
+[#$FOLDERTITLE=Práva ke složce - #]
+[#$INBOX=Doručená#]
+[#$DRAFTS=Rozepsaná#]
+[#$TRASH=Koš#]
+[#$SENT=Odeslaná#]
+[#$PUBLICFOLDERS=<em>Veřejné složky</em>#]
+
+[#$ACL_a=<span class="acl-a">Administrace</span>#]
+[#$ACL_c=<span class="acl-c">Vytváření podsložek</span>#]
+[#$ACL_e=<span class="acl-e">Mazání zpráv</span>#]
+[#$ACL_i=<span class="acl-i">Vkládání zpráv</span>#]
+[#$ACL_l=<span class="acl-l">Viditelnost (vyhledávání)</span>#]
+[#$ACL_r=<span class="acl-r">Otevírání zpráv</span>#]
+[#$ACL_s=<span class="acl-s">Označení zprávy jako přečtená/nepřečtená</span>#]
+[#$ACL_t=<span class="acl-t">Označení zprávy jako smazané</span>#]
+[#$ACL_w=<span class="acl-w">Úprava příznak zprávy</span>#]
+[#$ACL_x=<span class="acl-x">Odstranění složky</span>#]
+[#$ACL_unknown=<em>Přístup typu "%s" není implementován</em>#]
+
+[#$ACL_all=aceilrstwx#]
+
+[#$ACL_noaccess=<div class="small-error">Nemáte administrační přístup k této složce</div>#]
+
+[#$ACL_failed=<div class="small-error">Požadovaná práva nejsou platná</div>#]
+
+[#$ENTITY=Objekt#]
+[#$ACCESSRIGHTS=Přístupová práva#]
+[#$EDIT=edituj#]
+[#$DELETE=smaž#]
+[#$OR=nebo, uživatel=#]
+[#$UPDATEHDR=Aktualizuj přístupová práva:#]
+
+[#$UPDATE=Uprav#]
+
+[#$ACL_noaccess=<p class="small-error">Interní chyba - nemohu upravit práva</p>#]
+[#$ACL_cantread=<p class="small-error">Přístup k právům odepřen.</p>#]
+
+[#$USER=uživatel:#]
+[#$GROUP=skupina:#]
+[#$OWNER=vlastník#]
+[#$ANONYMOUS=anonymní#]
+[#$ADMINISTRATORS=administrátoři#]
+[#$OTHER=ostatní:#]
+
+-->
+
+<div align="center">
+<!-- Top Header -->
+
+<table cellpadding="0" cellspacing="0" border="0" width="95%">
+  <tbody>
+    <tr style="line-height: 0">
+      <td align="left" valign="top"
+        style="line-height: 0">[#@graytopleft.png, width="11" height="11"
+        alt="" border="0"@@#]</td>
+      <td bgcolor="#cccccc" class="graybox"></td>
+      <td align="right" valign="top"
+        style="line-height: 0">[#@graytopright.png, width="11" height="11"
+        alt="" border="0"@@#]</td>
+    </tr>
+    <tr bgcolor="#cccccc" class="graybox">
+      <td>&nbsp;</td>
+      <td bgcolor="#cccccc" class="graybox" width="100%">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td align="left" width="100%" valign="middle"
+              class="pageheader">[#f#]</td>
+              <td align="right" valign="middle">[#G#]</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr style="line-height: 0">
+      <td align="left" valign="bottom">[#@graybottomleft.png, width="11"
+        height="11" alt="" border="0"@@#]</td>
+      <td bgcolor="#cccccc" class="graybox"></td>
+      <td align="right" valign="bottom">[#@graybottomright.png, width="11"
+        height="11" alt="" border="0"@@#]</td>
+    </tr>
+  </tbody>
+</table>
+<!-- End of Top Header -->
+<!-- Sections. Folders, Create Messages, Preferences, Etc. -->
+[#include:navbar2#] <!-- Border around the folders list -->
+
+
+<div class="folder-acl-box">
+
+<table>
+  <tbody>
+    <tr>
+      <th colspan="2" align="left">Máte následující práva
+        na této složce:</th>
+    </tr>
+    <tr>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+      <td>[#LISTRIGHTS#]</td>
+    </tr>
+  </tbody>
+</table>
+<br />
+
+<hr width="80%" />
+[#GETACL#]
+
+<p><a href="[#s#]&amp;form=folders&amp;folderdir=[#D#]">Hotovo</a></p>
+<!-- ============ -->
+</div>
+
+<p>[#B#]</p>
+</div>
+</body>
+</html>
